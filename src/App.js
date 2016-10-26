@@ -8,13 +8,13 @@ class App extends Component {
     super()
     this.state = {
       todos: [
-        {title: 'Learn React', completed: false},
-        {title: 'Learn Redux', completed: false},
-        {title: 'Get loads of VC money', completed: false},
-        {title: 'Sell *completely* out', completed: false}
+        {id: 0, title: 'Learn React', completed: false},
+        {id: 1, title: 'Learn Redux', completed: false},
+        {id: 2, title: 'Get loads of VC money', completed: false},
+        {id: 3, title: 'Sell *completely* out', completed: false}
       ],
       inputValue: '',
-      activeFilter: 'none'
+      activeFilter: App.FILTER_INCOMPLETE
     }
   }
   toggleItemCompleted (i) {
@@ -34,6 +34,7 @@ class App extends Component {
   addItem () {
     let todos = this.state.todos.slice()
     todos.push({
+      id: todos.length,
       title: this.state.inputValue,
       completed: false
     })
@@ -43,6 +44,14 @@ class App extends Component {
     })
   }
   render () {
+    var filteredTodos = this.state.todos
+
+    if (this.state.activeFilter === App.FILTER_COMPLETED) {
+      filteredTodos = filteredTodos.filter((todo) => todo.completed)
+    } else if (this.state.activeFilter === App.FILTER_INCOMPLETE) {
+      filteredTodos = filteredTodos.filter((todo) => !todo.completed)
+    }
+
     return (
       <div className='app'>
         <header className='app-header'>
@@ -52,7 +61,7 @@ class App extends Component {
           value={this.state.inputValue}
           onChange={(event) => this.handleInputChange(event)}
           onSubmit={() => this.addItem()} />
-        <TodoList items={this.state.todos}
+        <TodoList items={filteredTodos}
           onClick={(i) => this.toggleItemCompleted(i)} />
         <footer className='app-footer'>
           <span>Made with a little knowledge, and a lot of ❤️ by <a href='https://twitter.com/rhysforyou'>Rhys Powell</a></span>
@@ -63,5 +72,8 @@ class App extends Component {
     )
   }
 }
+App.FILTER_NONE = 'none'
+App.FILTER_COMPLETED = 'completed'
+App.FILTER_INCOMPLETE = 'incomplete'
 
 export default App

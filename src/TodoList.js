@@ -8,8 +8,8 @@ const TodoList = ({items, onClick}) => {
       <TodoItem
         title={item.title}
         completed={item.completed}
-        key={index}
-        onClick={() => onClick(index)} />
+        key={item.id}
+        onClick={() => onClick(item.id)} />
     )
   })
 
