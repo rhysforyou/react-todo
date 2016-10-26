@@ -35,5 +35,8 @@ storiesOf('TodoInput', module)
 
 storiesOf('TodoFilterBar', module)
   .add('with some filters', () => (
-    <TodoFilterBar filters={['one', 'two', 'three']} activeFilter='one' onClickFilter={action('clicked')} />
+    <TodoFilterBar filters={['one', 'two', 'three']}
+      filterCounts={[3, 2, 1]}
+      activeFilter='one'
+      onClickFilter={action('clicked')} />
   ))
