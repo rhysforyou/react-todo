@@ -1,7 +1,7 @@
 {
   "name": "Todo",
   "version": "0.1.0",
-  "homepage": "http://extremely.online/react-Todo/",
+  "homepage": "http://extremely.online/react-todo/",
   "private": true,
   "devDependencies": {
     "eslint": "^3.8.1",

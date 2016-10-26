@@ -43,13 +43,18 @@ class App extends Component {
   render () {
     return (
       <div className='app'>
-        <h1>To Do List</h1>
+        <header className='app-header'>
+          <h1>To Do List</h1>
+        </header>
         <TodoInput
           value={this.state.inputValue}
           onChange={(event) => this.handleInputChange(event)}
           onSubmit={() => this.addItem()} />
         <TodoList items={this.state.Todos}
           onClick={(i) => this.toggleItemCompleted(i)} />
+        <footer className='app-footer'>
+          <span>Made with ❤️ by Rhys Powell</span>
+        </footer>
       </div>
     )
   }
