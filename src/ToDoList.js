@@ -1,4 +1,5 @@
 import React from 'react'
+import './TodoList.css'
 import TodoItem from './TodoItem'
 
 const TodoList = ({items, onClick}) => {
@@ -13,7 +14,7 @@ const TodoList = ({items, onClick}) => {
   })
 
   return (
-    <ul className='Todo-list'>
+    <ul className='todo-list'>
       {listItems}
     </ul>
   )
