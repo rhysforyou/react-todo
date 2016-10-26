@@ -49,12 +49,15 @@ class App extends Component {
     this.setState({activeFilter: filter})
   }
   render () {
-    var filteredTodos = this.state.todos
+    const todos = this.state.todos
+    const completedTodos = todos.filter((todo) => todo.completed)
+    const incompleteTodos = todos.filter((todo) => !todo.completed)
+    var filteredTodos = todos
 
     if (this.state.activeFilter === App.FILTER_COMPLETED) {
-      filteredTodos = filteredTodos.filter((todo) => todo.completed)
+      filteredTodos = completedTodos
     } else if (this.state.activeFilter === App.FILTER_INCOMPLETE) {
-      filteredTodos = filteredTodos.filter((todo) => !todo.completed)
+      filteredTodos = incompleteTodos
     }
 
     return (
@@ -69,6 +72,7 @@ class App extends Component {
         <TodoList items={filteredTodos}
           onClick={(i) => this.toggleItemCompleted(i)} />
         <TodoFilterBar filters={[App.FILTER_ALL, App.FILTER_COMPLETED, App.FILTER_INCOMPLETE]}
+          filterCounts={[todos.length, completedTodos.length, incompleteTodos.length]}
           activeFilter={this.state.activeFilter}
           onClickFilter={(filter) => this.setFilter(filter)} />
         <footer className='app-footer'>
