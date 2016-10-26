@@ -1,14 +1,8 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
-import Welcome from './Welcome'
 import TodoItem from '../TodoItem'
 import TodoList from '../TodoList'
 import TodoInput from '../TodoInput'
-
-storiesOf('Welcome', module)
-  .add('to Storybook', () => (
-    <Welcome showApp={linkTo('Button')} />
-  ))
 
 storiesOf('TodoItem', module)
   .add('incomplete', () => (
