@@ -1,8 +1,9 @@
 import React from 'react'
-import { storiesOf, action, linkTo } from '@kadira/storybook'
+import { storiesOf, action } from '@kadira/storybook'
 import TodoItem from '../TodoItem'
 import TodoList from '../TodoList'
 import TodoInput from '../TodoInput'
+import TodoFilterBar from '../TodoFilterBar'
 
 storiesOf('TodoItem', module)
   .add('incomplete', () => (
@@ -30,4 +31,9 @@ storiesOf('TodoInput', module)
   ))
   .add('with content', () => (
     <TodoInput value='A new to-do' onChange={action('change')} onSubmit={action('submit')} />
+  ))
+
+storiesOf('TodoFilterBar', module)
+  .add('with some filters', () => (
+    <TodoFilterBar filters={['one', 'two', 'three']} activeFilter='one' onClickFilter={action('clicked')} />
   ))
