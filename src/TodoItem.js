@@ -4,7 +4,7 @@ import React from 'react'
 const TodoItem = ({title, completed, onClick}) => {
   const completionClass = completed ? 'completed' : 'incomplete'
   return (
-    <li className={`Todo-list-item ${completionClass}`} onClick={onClick}>
+    <li className={`todo-list-item ${completionClass}`} onClick={onClick}>
       <label>
         <input type='checkbox' checked={completed} />
         {title}

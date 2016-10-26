@@ -7,36 +7,38 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      Todos: [
-        {title: 'Do one thing', completed: false},
-        {title: 'Then do another', completed: false},
-        {title: 'Finally, do the last thing', completed: false}
+      todos: [
+        {title: 'Learn React', completed: false},
+        {title: 'Learn Redux', completed: false},
+        {title: 'Get loads of VC money', completed: false},
+        {title: 'Sell *completely* out', completed: false}
       ],
-      inputValue: ''
+      inputValue: '',
+      activeFilter: 'none'
     }
   }
   toggleItemCompleted (i) {
-    let Todos = this.state.Todos.slice()
-    let Todo = Todos[i]
+    let todos = this.state.todos.slice()
+    let todo = todos[i]
 
-    Todos[i] = {
-      title: Todo.title,
-      completed: !Todo.completed
+    todos[i] = {
+      title: todo.title,
+      completed: !todo.completed
     }
 
-    this.setState({Todos: Todos})
+    this.setState({todos: todos})
   }
   handleInputChange (event) {
     this.setState({inputValue: event.target.value})
   }
   addItem () {
-    let Todos = this.state.Todos.slice()
-    Todos.push({
+    let todos = this.state.todos.slice()
+    todos.push({
       title: this.state.inputValue,
       completed: false
     })
     this.setState({
-      Todos: Todos,
+      todos: todos,
       inputValue: ''
     })
   }
@@ -50,7 +52,7 @@ class App extends Component {
           value={this.state.inputValue}
           onChange={(event) => this.handleInputChange(event)}
           onSubmit={() => this.addItem()} />
-        <TodoList items={this.state.Todos}
+        <TodoList items={this.state.todos}
           onClick={(i) => this.toggleItemCompleted(i)} />
         <footer className='app-footer'>
           <span>Made with a little knowledge, and a lot of ❤️ by <a href='https://twitter.com/rhysforyou'>Rhys Powell</a></span>

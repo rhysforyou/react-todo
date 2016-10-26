@@ -1,4 +1,4 @@
-.Todo-list-item {
+.todo-list-item {
   border-top: 1px solid #ddd;
   box-sizing: border-box;
   font-family: sans-serif;
@@ -7,15 +7,15 @@
   padding: 1rem;
 }
 
-.Todo-list-item:hover {
+.todo-list-item:hover {
   background: ghostwhite;
 }
 
-.Todo-list-item input {
+.todo-list-item input {
   margin-right: 1rem;
 }
 
-.Todo-list-item.completed {
+.todo-list-item.completed {
   color: #999;
   text-decoration: line-through;
 }
