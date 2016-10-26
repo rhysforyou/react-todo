@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ToDoInput ({value, onChange, onSubmit}) {
+const ToDoInput = ({value, onChange, onSubmit}) => {
   return (
     <div className='todo-input'>
       <input type='text' value={value} onChange={onChange} />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
-import ToDoInput from './ToDoInput.js'
-import ToDoList from './ToDoList.js'
+import ToDoInput from './ToDoInput'
+import ToDoList from './ToDoList'
 
 class App extends Component {
   constructor () {

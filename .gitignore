@@ -45,3 +45,6 @@ jspm_packages
 
 # Built package
 build/
+
+# React Storybook
+.storybook/

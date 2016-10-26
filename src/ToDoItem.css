@@ -1,0 +1,21 @@
+.todo-list-item {
+  border-top: 2px solid #ddd;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #333;
+  list-style: none;
+  padding: 1rem;
+}
+
+.todo-list-item:hover {
+  background: ghostwhite;
+}
+
+.todo-list-item input {
+  margin-right: 1rem;
+}
+
+.todo-list-item.completed {
+  color: #999;
+  text-decoration: line-through;
+}

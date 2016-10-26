@@ -1,7 +1,7 @@
 import React from 'react'
-import ToDoItem from './ToDoItem.js'
+import ToDoItem from './ToDoItem'
 
-function ToDoList ({items, onClick}) {
+const ToDoList = ({items, onClick}) => {
   const listItems = items.map((item, index) => {
     return (
       <ToDoItem
