@@ -4,8 +4,14 @@ const TodoInput = ({value, onChange, onSubmit}) => {
   const canSubmit = (value !== '')
   return (
     <div className='Todo-input'>
-      <input type='text' value={value} onChange={onChange} />
-      <input type='button' disabled={!canSubmit} value='Add Item' onClick={onSubmit} />
+      <input type='text'
+        placeholder='Add a new to-do'
+        value={value}
+        onChange={onChange} />
+      <input type='button'
+        value='Add Item'
+        disabled={!canSubmit}
+        onClick={onSubmit} />
     </div>
   )
 }
