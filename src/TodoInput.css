@@ -8,13 +8,14 @@
 .todo-input input[type="text"] {
   flex: 1 1 auto;
   border: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
   padding: 5px 0;
   font-size: 100%;
+  transition: border 0.2s ease-in-out;
 }
 .todo-input input[type="text"]:focus {
   outline: none;
-  border-bottom-color: #ccc;
+  border-bottom-color: #4078c0;
 }
 
 .todo-input button {
