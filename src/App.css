@@ -9,9 +9,8 @@
 
 .app-header {
   padding: 1rem;
-  background: black;
-  color: white;
-  border-bottom: solid 1px #ddd;
+  color: black;
+  background: ghostwhite;
   text-align: center;
 }
 
@@ -22,7 +21,7 @@
 }
 
 .app-header .highlight {
-  color: #61DAFB;
+  color: #4078c0;
 }
 
 .app-footer {

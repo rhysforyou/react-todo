@@ -1,17 +1,15 @@
 import React from 'react'
+import './TodoInput.css'
 
 const TodoInput = ({value, onChange, onSubmit}) => {
   const canSubmit = (value !== '')
   return (
-    <div className='Todo-input'>
+    <div className='todo-input'>
       <input type='text'
         placeholder='Add a new to-do'
         value={value}
         onChange={onChange} />
-      <input type='button'
-        value='Add Item'
-        disabled={!canSubmit}
-        onClick={onSubmit} />
+      <button disabled={!canSubmit} onClick={onSubmit}>Add To-Do</button>
     </div>
   )
 }
