@@ -1,6 +1,8 @@
 # To Do List
 
-[![Build Status](https://travis-ci.org/rpowelll/react-todo.svg?branch=master)](https://travis-ci.org/rpowelll/react-todo) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/rpowelll/react-todo.svg?branch=master)](https://travis-ci.org/rpowelll/react-todo)
+[![Coverage Status](https://coveralls.io/repos/github/rpowelll/react-todo/badge.svg?branch=master)](https://coveralls.io/github/rpowelll/react-todo?branch=master)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Just a simple to do list in React that I threw together after reading the official getting started guide. The goal here isn't to write good code so much as it is to ensure the concepts of that intro tutorial sunk in.
 
