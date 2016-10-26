@@ -1,0 +1,27 @@
+.todo-filter-bar {
+  padding: 1rem;
+  background: ghostwhite;
+}
+
+.todo-filter-bar button {
+  margin-right: 1rem;
+  background: none;
+  color: #4078c0;
+  font-size: 100%;
+  border-radius: 3px;
+  border: none;
+  padding: 4px 10px;
+}
+.todo-filter-bar button:last-child {
+  margin-right: 0;
+}
+.todo-filter-bar button.active {
+  background: #4078c0;
+  color: white;
+}
+.todo-filter-bar button.inactive:hover {
+  background: rgba(0,0,0,0.1)
+}
+.todo-filter-bar button:focus {
+  outline: none;
+}

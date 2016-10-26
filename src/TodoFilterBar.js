@@ -1,4 +1,5 @@
 import React from 'react'
+import './TodoFilterBar.css'
 import titleCase from 'title-case'
 
 const TodoFilterBar = ({filters, activeFilter, onClickFilter}) => {

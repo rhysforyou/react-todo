@@ -15,7 +15,7 @@ class App extends Component {
         {id: 3, title: 'Sell *completely* out', completed: false}
       ],
       inputValue: '',
-      activeFilter: App.FILTER_INCOMPLETE
+      activeFilter: App.FILTER_ALL
     }
   }
   toggleItemCompleted (i) {
@@ -68,7 +68,7 @@ class App extends Component {
           onSubmit={() => this.addItem()} />
         <TodoList items={filteredTodos}
           onClick={(i) => this.toggleItemCompleted(i)} />
-        <TodoFilterBar filters={[App.FILTER_NONE, App.FILTER_COMPLETED, App.FILTER_INCOMPLETE]}
+        <TodoFilterBar filters={[App.FILTER_ALL, App.FILTER_COMPLETED, App.FILTER_INCOMPLETE]}
           activeFilter={this.state.activeFilter}
           onClickFilter={(filter) => this.setFilter(filter)} />
         <footer className='app-footer'>
@@ -80,7 +80,7 @@ class App extends Component {
     )
   }
 }
-App.FILTER_NONE = 'none'
+App.FILTER_ALL = 'all'
 App.FILTER_COMPLETED = 'completed'
 App.FILTER_INCOMPLETE = 'incomplete'
 
