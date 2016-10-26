@@ -9,8 +9,10 @@
 
 .app-header {
   padding: 1rem;
-  color: #333;
+  background: black;
+  color: white;
   border-bottom: solid 1px #ddd;
+  text-align: center;
 }
 
 .app-header h1 {
@@ -19,8 +21,17 @@
   font-weight: lighter;
 }
 
+.app-header .highlight {
+  color: #61DAFB;
+}
+
 .app-footer {
-  color: #999;
+  color: #aaa;
   text-align: center;
-  padding: 1rem
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app-footer a {
+  color: #666;
 }

@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className='app'>
         <header className='app-header'>
-          <h1>To Do List</h1>
+          <h1><span className='highlight'>React</span> To Do List</h1>
         </header>
         <TodoInput
           value={this.state.inputValue}
@@ -53,7 +53,9 @@ class App extends Component {
         <TodoList items={this.state.Todos}
           onClick={(i) => this.toggleItemCompleted(i)} />
         <footer className='app-footer'>
-          <span>Made with ❤️ by Rhys Powell</span>
+          <span>Made with a little knowledge, and a lot of ❤️ by <a href='https://twitter.com/rhysforyou'>Rhys Powell</a></span>
+          <br />
+          <span><a href='https://github.com/rpowelll/react-todo'>View on GitHub</a></span>
         </footer>
       </div>
     )
