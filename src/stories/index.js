@@ -3,6 +3,7 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Welcome from './Welcome'
 import TodoItem from '../TodoItem'
 import TodoList from '../TodoList'
+import TodoInput from '../TodoInput'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -28,3 +29,11 @@ storiesOf('TodoList', module)
       <TodoList items={items} onClick={action('clicked')} />
     )
   })
+
+storiesOf('TodoInput', module)
+  .add('empty', () => (
+    <TodoInput value='' onChange={action('change')} onSubmit={action('submit')} />
+  ))
+  .add('with content', () => (
+    <TodoInput value='A new to-do' onChange={action('change')} onSubmit={action('submit')} />
+  ))
