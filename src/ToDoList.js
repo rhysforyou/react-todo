@@ -1,10 +1,10 @@
 import React from 'react'
-import ToDoItem from './ToDoItem'
+import TodoItem from './TodoItem'
 
-const ToDoList = ({items, onClick}) => {
+const TodoList = ({items, onClick}) => {
   const listItems = items.map((item, index) => {
     return (
-      <ToDoItem
+      <TodoItem
         title={item.title}
         completed={item.completed}
         key={index}
@@ -13,14 +13,14 @@ const ToDoList = ({items, onClick}) => {
   })
 
   return (
-    <ul className='todo-list'>
+    <ul className='Todo-list'>
       {listItems}
     </ul>
   )
 }
-ToDoList.propTypes = {
+TodoList.propTypes = {
   items: React.PropTypes.array,
   onClick: React.PropTypes.func
 }
 
-export default ToDoList
+export default TodoList

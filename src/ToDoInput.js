@@ -1,17 +1,17 @@
 import React from 'react'
 
-const ToDoInput = ({value, onChange, onSubmit}) => {
+const TodoInput = ({value, onChange, onSubmit}) => {
   return (
-    <div className='todo-input'>
+    <div className='Todo-input'>
       <input type='text' value={value} onChange={onChange} />
       <input type='button' value='Add Item' onClick={onSubmit} />
     </div>
   )
 }
-ToDoInput.propTypes = {
+TodoInput.propTypes = {
   value: React.PropTypes.string,
   onChange: React.PropTypes.func,
   onSubmit: React.PropTypes.func
 }
 
-export default ToDoInput
+export default TodoInput

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import './App.css'
-import ToDoInput from './ToDoInput'
-import ToDoList from './ToDoList'
+import TodoInput from './TodoInput'
+import TodoList from './TodoList'
 
 class App extends Component {
   constructor () {
     super()
     this.state = {
-      todos: [
+      Todos: [
         {title: 'Do one thing', completed: false},
         {title: 'Then do another', completed: false},
         {title: 'Finally, do the last thing', completed: false}
@@ -16,27 +16,27 @@ class App extends Component {
     }
   }
   toggleItemCompleted (i) {
-    let todos = this.state.todos.slice()
-    let todo = todos[i]
+    let Todos = this.state.Todos.slice()
+    let Todo = Todos[i]
 
-    todos[i] = {
-      title: todo.title,
-      completed: !todo.completed
+    Todos[i] = {
+      title: Todo.title,
+      completed: !Todo.completed
     }
 
-    this.setState({todos: todos})
+    this.setState({Todos: Todos})
   }
   handleInputChange (event) {
     this.setState({inputValue: event.target.value})
   }
   addItem () {
-    let todos = this.state.todos.slice()
-    todos.push({
+    let Todos = this.state.Todos.slice()
+    Todos.push({
       title: this.state.inputValue,
       completed: false
     })
     this.setState({
-      todos: todos,
+      Todos: Todos,
       inputValue: ''
     })
   }
@@ -44,11 +44,11 @@ class App extends Component {
     return (
       <div className='app'>
         <h1>To Do List</h1>
-        <ToDoInput
+        <TodoInput
           value={this.state.inputValue}
           onChange={(event) => this.handleInputChange(event)}
           onSubmit={() => this.addItem()} />
-        <ToDoList items={this.state.todos}
+        <TodoList items={this.state.Todos}
           onClick={(i) => this.toggleItemCompleted(i)} />
       </div>
     )

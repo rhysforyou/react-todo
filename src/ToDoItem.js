@@ -1,10 +1,10 @@
-import './ToDoItem.css'
+import './TodoItem.css'
 import React from 'react'
 
-const ToDoItem = ({title, completed, onClick}) => {
+const TodoItem = ({title, completed, onClick}) => {
   const completionClass = completed ? 'completed' : 'incomplete'
   return (
-    <li className={`todo-list-item ${completionClass}`}>
+    <li className={`Todo-list-item ${completionClass}`}>
       <label>
         <input type='checkbox' checked={completed} onClick={onClick} />
         {title}
@@ -12,10 +12,10 @@ const ToDoItem = ({title, completed, onClick}) => {
     </li>
   )
 }
-ToDoItem.propTypes = {
+TodoItem.propTypes = {
   title: React.PropTypes.string,
   completed: React.PropTypes.bool,
   onClick: React.PropTypes.func
 }
 
-export default ToDoItem
+export default TodoItem
