@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import TodoInput from './TodoInput'
 import TodoList from './TodoList'
+import TodoFilterBar from './TodoFilterBar'
 
 class App extends Component {
   constructor () {
@@ -22,6 +23,7 @@ class App extends Component {
     let todo = todos[i]
 
     todos[i] = {
+      id: todo.id,
       title: todo.title,
       completed: !todo.completed
     }
@@ -43,6 +45,9 @@ class App extends Component {
       inputValue: ''
     })
   }
+  setFilter (filter) {
+    this.setState({activeFilter: filter})
+  }
   render () {
     var filteredTodos = this.state.todos
 
@@ -63,6 +68,9 @@ class App extends Component {
           onSubmit={() => this.addItem()} />
         <TodoList items={filteredTodos}
           onClick={(i) => this.toggleItemCompleted(i)} />
+        <TodoFilterBar filters={[App.FILTER_NONE, App.FILTER_COMPLETED, App.FILTER_INCOMPLETE]}
+          activeFilter={this.state.activeFilter}
+          onClickFilter={(filter) => this.setFilter(filter)} />
         <footer className='app-footer'>
           <span>Made with a little knowledge, and a lot of ❤️ by <a href='https://twitter.com/rhysforyou'>Rhys Powell</a></span>
           <br />
