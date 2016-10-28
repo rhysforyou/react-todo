@@ -4,7 +4,7 @@ import TodoInput from './TodoInput'
 import TodoList from './TodoList'
 import TodoFilterBar from './TodoFilterBar'
 
-function App ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) {
+const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) => {
   const todos = state.todos
   const completedTodos = todos.filter((todo) => todo.completed)
   const incompleteTodos = todos.filter((todo) => !todo.completed)
