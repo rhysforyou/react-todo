@@ -1,6 +1,5 @@
 import React from 'react'
 import './TodoFilterBar.css'
-import titleCase from 'title-case'
 
 const renderButtons = (filters, counts, active, onClick) => {
   return filters.map((filter, index) => (
@@ -8,7 +7,7 @@ const renderButtons = (filters, counts, active, onClick) => {
       key={index}
       onClick={(e) => onClick(filter)}
       className={filter === active ? 'active' : 'inactive'}>
-      {titleCase(filter)} ({counts[index]})
+      {filter} ({counts[index]})
     </button>
   ))
 }
