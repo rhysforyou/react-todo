@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Filter from './Filter'
-import App from './App'
+import Filter from '../Filter'
+import App from '../components/App'
 
 class AppContainer extends Component {
   constructor () {
