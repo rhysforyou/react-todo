@@ -28,8 +28,8 @@ class AppContainer extends Component {
 
     this.setState({todos: todos})
   }
-  handleInputChange (event) {
-    this.setState({inputValue: event.target.value})
+  handleInputChange (value) {
+    this.setState({inputValue: value})
   }
   handleAddItem () {
     let todos = this.state.todos.slice()
@@ -49,10 +49,10 @@ class AppContainer extends Component {
   render () {
     return (
       <App state={this.state}
-        onClickItem={this.handleClickItem}
-        onUpdateInput={this.handleInputChange}
-        onSubmitInput={this.handleAddItem}
-        onClickFilter={this.setFilter} />
+        onClickItem={(i) => this.handleClickItem(i)}
+        onUpdateInput={(val) => this.handleInputChange(val)}
+        onSubmitInput={() => this.handleAddItem()}
+        onClickFilter={(filter) => this.setFilter(filter)} />
     )
   }
 }
