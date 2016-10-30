@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Filter from '../Filter'
+import { Filters } from '../actions'
 import App from '../components/App'
 
 class AppContainer extends Component {
@@ -13,7 +13,7 @@ class AppContainer extends Component {
         {id: 3, title: 'Sell *completely* out', completed: false}
       ],
       inputValue: '',
-      activeFilter: Filter.FILTER_ALL
+      activeFilter: Filters.FILTER_ALL
     }
   }
   handleClickItem (i) {

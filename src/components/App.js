@@ -3,7 +3,7 @@ import './App.css'
 import TodoInput from './TodoInput'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import TodoFilterBar from './TodoFilterBar'
-import Filter from '../Filter'
+import { Filters } from '../actions'
 
 const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) => {
   const todos = state.todos
@@ -22,7 +22,7 @@ const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) 
       <VisibleTodoList items={todos}
         filter={state.activeFilter}
         onClickItem={onClickItem} />
-      <TodoFilterBar filters={[Filter.FILTER_ALL, Filter.FILTER_COMPLETED, Filter.FILTER_INCOMPLETE]}
+      <TodoFilterBar filters={[Filters.FILTER_ALL, Filters.FILTER_COMPLETED, Filters.FILTER_INCOMPLETE]}
         filterCounts={[todos.length, completedTodos.length, incompleteTodos.length]}
         activeFilter={state.activeFilter}
         onClickFilter={onClickFilter} />

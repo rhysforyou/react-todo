@@ -1,12 +1,12 @@
 import React from 'react'
-import Filter from '../Filter'
+import { Filters } from '../actions'
 import TodoList from '../components/TodoList'
 
 const visibleItems = (todos, filter) => {
   switch (filter) {
-    case Filter.FILTER_COMPLETED:
+    case Filters.FILTER_COMPLETED:
       return todos.filter(t => t.completed)
-    case Filter.FILTER_INCOMPLETE:
+    case Filters.FILTER_INCOMPLETE:
       return todos.filter(t => !t.completed)
     default:
       return todos
