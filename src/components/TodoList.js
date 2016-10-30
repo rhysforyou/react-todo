@@ -12,14 +12,14 @@ const renderItems = (items, onClickItem) => {
   ))
 }
 
-const TodoList = ({items, onClick}) => (
+const TodoList = ({items, onClickItem}) => (
   <ul className='todo-list'>
-    {renderItems(items, onClick)}
+    {renderItems(items, onClickItem)}
   </ul>
 )
 TodoList.propTypes = {
   items: React.PropTypes.array,
-  onClick: React.PropTypes.func
+  onClickItem: React.PropTypes.func
 }
 
 export default TodoList

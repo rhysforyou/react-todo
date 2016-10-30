@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import TodoInput from './TodoInput'
-import TodoList from './TodoList'
+import VisibleTodoList from '../containers/VisibleTodoList'
 import TodoFilterBar from './TodoFilterBar'
 import Filter from '../Filter'
 
@@ -9,13 +9,6 @@ const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) 
   const todos = state.todos
   const completedTodos = todos.filter((todo) => todo.completed)
   const incompleteTodos = todos.filter((todo) => !todo.completed)
-  var filteredTodos = todos
-
-  if (state.activeFilter === App.FILTER_COMPLETED) {
-    filteredTodos = completedTodos
-  } else if (state.activeFilter === App.FILTER_INCOMPLETE) {
-    filteredTodos = incompleteTodos
-  }
 
   return (
     <div className='app'>
@@ -26,8 +19,9 @@ const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) 
         value={state.inputValue}
         onChange={onUpdateInput}
         onSubmit={onSubmitInput} />
-      <TodoList items={filteredTodos}
-        onClick={onClickItem} />
+      <VisibleTodoList items={todos}
+        filter={state.activeFilter}
+        onClickItem={onClickItem} />
       <TodoFilterBar filters={[Filter.FILTER_ALL, Filter.FILTER_COMPLETED, Filter.FILTER_INCOMPLETE]}
         filterCounts={[todos.length, completedTodos.length, incompleteTodos.length]}
         activeFilter={state.activeFilter}
