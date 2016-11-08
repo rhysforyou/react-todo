@@ -1,25 +1,24 @@
-import React from 'react'
 import './Footer.css'
+import React from 'react'
 
-const renderButtons = (filters, counts, active, onClick) => {
+const renderButtons = (filters, active, onClick) => {
   return filters.map((filter, index) => (
     <button
       key={index}
       onClick={(e) => onClick(filter)}
       className={filter === active ? 'active' : 'inactive'}>
-      {filter} ({counts[index]})
+      {filter}
     </button>
   ))
 }
-const Footer = ({filters, filterCounts, activeFilter, onClickFilter}) => (
+const Footer = ({filters, activeFilter, onClickFilter}) => (
   <div className='todo-filter-bar'>
-    {renderButtons(filters, filterCounts, activeFilter, onClickFilter)}
+    {renderButtons(filters, activeFilter, onClickFilter)}
   </div>
 )
 Footer.propTypes = {
-  filters: React.PropTypes.array,
-  filterCounts: React.PropTypes.array,
-  activeFilter: React.PropTypes.string,
+  filters: React.PropTypes.array.isRequired,
+  activeFilter: React.PropTypes.string.isRequired,
   onClickFilter: React.PropTypes.func
 }
 

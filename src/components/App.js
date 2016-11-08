@@ -2,8 +2,7 @@ import React from 'react'
 import './App.css'
 import TodoInput from './TodoInput'
 import VisibleTodoList from '../containers/VisibleTodoList'
-import Footer from './Footer'
-import { Filters } from '../actions/visibilityFilter'
+import FooterContainer from '../containers/FooterContainer'
 
 const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) => {
   const todos = state.todos
@@ -22,9 +21,7 @@ const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) 
       <VisibleTodoList items={todos}
         filter={state.activeFilter}
         onClickItem={onClickItem} />
-      <Footer filters={[Filters.FILTER_ALL, Filters.FILTER_COMPLETED, Filters.FILTER_INCOMPLETE]}
-        filterCounts={[todos.length, completedTodos.length, incompleteTodos.length]}
-        activeFilter={state.activeFilter}
+      <FooterContainer activeFilter={state.activeFilter}
         onClickFilter={onClickFilter} />
       <footer className='app-footer'>
         <span>Made with a little knowledge, and a lot of ❤️ by <a href='https://twitter.com/rhysforyou'>Rhys Powell</a></span>

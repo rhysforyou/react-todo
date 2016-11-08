@@ -1,5 +1,5 @@
-import React from 'react'
 import './TodoInput.css'
+import React from 'react'
 
 const TodoInput = ({value, onChange, onSubmit}) => (
   <div className='todo-input'>

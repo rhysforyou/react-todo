@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf, action } from '@kadira/storybook'
-import TodoItem from '../TodoItem'
-import TodoList from '../TodoList'
-import TodoInput from '../TodoInput'
-import TodoFilterBar from '../TodoFilterBar'
+import TodoItem from '../components/TodoItem'
+import TodoList from '../components/TodoList'
+import TodoInput from '../components/TodoInput'
+import Footer from '../components/Footer'
 
 storiesOf('TodoItem', module)
   .add('incomplete', () => (
@@ -33,10 +33,9 @@ storiesOf('TodoInput', module)
     <TodoInput value='A new to-do' onChange={action('change')} onSubmit={action('submit')} />
   ))
 
-storiesOf('TodoFilterBar', module)
+storiesOf('Footer', module)
   .add('with some filters', () => (
-    <TodoFilterBar filters={['one', 'two', 'three']}
-      filterCounts={[3, 2, 1]}
+    <Footer filters={['one', 'two', 'three']}
       activeFilter='one'
       onClickFilter={action('clicked')} />
   ))
