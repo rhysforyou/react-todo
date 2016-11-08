@@ -1,5 +1,5 @@
 import React from 'react'
-import './TodoFilterBar.css'
+import './Footer.css'
 
 const renderButtons = (filters, counts, active, onClick) => {
   return filters.map((filter, index) => (
@@ -11,16 +11,16 @@ const renderButtons = (filters, counts, active, onClick) => {
     </button>
   ))
 }
-const TodoFilterBar = ({filters, filterCounts, activeFilter, onClickFilter}) => (
+const Footer = ({filters, filterCounts, activeFilter, onClickFilter}) => (
   <div className='todo-filter-bar'>
     {renderButtons(filters, filterCounts, activeFilter, onClickFilter)}
   </div>
 )
-TodoFilterBar.propTypes = {
+Footer.propTypes = {
   filters: React.PropTypes.array,
   filterCounts: React.PropTypes.array,
   activeFilter: React.PropTypes.string,
   onClickFilter: React.PropTypes.func
 }
 
-export default TodoFilterBar
+export default Footer
