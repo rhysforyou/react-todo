@@ -1,5 +1,5 @@
 import React from 'react'
-import { Filters } from '../actions'
+import { Filters } from '../actions/visibilityFilter'
 import TodoList from '../components/TodoList'
 
 const visibleItems = (todos, filter) => {

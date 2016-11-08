@@ -3,7 +3,7 @@ import './App.css'
 import TodoInput from './TodoInput'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import Footer from './Footer'
-import { Filters } from '../actions'
+import { Filters } from '../actions/visibilityFilter'
 
 const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) => {
   const todos = state.todos

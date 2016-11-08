@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Filters } from '../actions'
+import { Filters } from '../actions/visibilityFilter'
 import App from '../components/App'
 
 class AppContainer extends Component {
