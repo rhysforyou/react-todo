@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
-import TodoInput from './TodoInput'
-import VisibleTodoList from '../containers/VisibleTodoList'
-import FooterContainer from '../containers/FooterContainer'
+import AddTodo from './AddTodo'
+import VisibleTodoList from './VisibleTodoList'
+import FooterContainer from './FooterContainer'
 
 const App = ({state, onUpdateInput, onSubmitInput}) => {
   return (
@@ -10,10 +10,7 @@ const App = ({state, onUpdateInput, onSubmitInput}) => {
       <header className='app-header'>
         <h1><span className='highlight'>React</span> To Do List</h1>
       </header>
-      <TodoInput
-        value={state.inputValue}
-        onChange={onUpdateInput}
-        onSubmit={onSubmitInput} />
+      <AddTodo />
       <VisibleTodoList />
       <FooterContainer />
       <footer className='app-footer'>
