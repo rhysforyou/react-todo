@@ -1,0 +1,20 @@
+exports[`test renders correctly 1`] = `
+<div
+  className="todo-filter-bar">
+  <button
+    className="active"
+    onClick={[Function]}>
+    one
+  </button>
+  <button
+    className="inactive"
+    onClick={[Function]}>
+    two
+  </button>
+  <button
+    className="inactive"
+    onClick={[Function]}>
+    three
+  </button>
+</div>
+`;
