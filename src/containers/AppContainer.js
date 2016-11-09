@@ -12,21 +12,8 @@ class AppContainer extends Component {
         {title: 'Get loads of VC money', completed: false},
         {title: 'Sell *completely* out', completed: false}
       ],
-      inputValue: '',
-      activeFilter: Filters.FILTER_ALL
+      inputValue: ''
     }
-  }
-  handleClickItem (i) {
-    let todos = this.state.todos.slice()
-    let todo = todos[i]
-
-    todos[i] = {
-      id: todo.id,
-      title: todo.title,
-      completed: !todo.completed
-    }
-
-    this.setState({todos: todos})
   }
   handleInputChange (value) {
     this.setState({inputValue: value})
@@ -43,15 +30,11 @@ class AppContainer extends Component {
       inputValue: ''
     })
   }
-  setFilter (filter) {
-    this.setState({activeFilter: filter})
-  }
   render () {
     return (
       <App state={this.state}
         onUpdateInput={(val) => this.handleInputChange(val)}
-        onSubmitInput={() => this.handleAddItem()}
-        onClickFilter={(filter) => this.setFilter(filter)} />
+        onSubmitInput={() => this.handleAddItem()} />
     )
   }
 }
