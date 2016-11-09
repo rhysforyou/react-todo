@@ -1,0 +1,15 @@
+exports[`test renders correctly 1`] = `
+<div
+  className="todo-input">
+  <input
+    onChange={undefined}
+    placeholder="Add a new to-do"
+    type="text"
+    value="Test Item" />
+  <button
+    disabled={false}
+    onClick={undefined}>
+    Add To-Do
+  </button>
+</div>
+`;
