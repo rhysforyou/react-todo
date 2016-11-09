@@ -4,11 +4,7 @@ import TodoInput from './TodoInput'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import FooterContainer from '../containers/FooterContainer'
 
-const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) => {
-  const todos = state.todos
-  const completedTodos = todos.filter((todo) => todo.completed)
-  const incompleteTodos = todos.filter((todo) => !todo.completed)
-
+const App = ({state, onUpdateInput, onSubmitInput, onClickFilter}) => {
   return (
     <div className='app'>
       <header className='app-header'>
@@ -18,9 +14,7 @@ const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) 
         value={state.inputValue}
         onChange={onUpdateInput}
         onSubmit={onSubmitInput} />
-      <VisibleTodoList items={todos}
-        filter={state.activeFilter}
-        onClickItem={onClickItem} />
+      <VisibleTodoList />
       <FooterContainer activeFilter={state.activeFilter}
         onClickFilter={onClickFilter} />
       <footer className='app-footer'>
@@ -33,7 +27,6 @@ const App = ({state, onClickItem, onUpdateInput, onSubmitInput, onClickFilter}) 
 }
 App.propTypes = {
   state: React.PropTypes.object,
-  onClickItem: React.PropTypes.func,
   onUpdateInput: React.PropTypes.func,
   onSubmitInput: React.PropTypes.func,
   onClickFilter: React.PropTypes.func

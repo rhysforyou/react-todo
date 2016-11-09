@@ -7,10 +7,10 @@ class AppContainer extends Component {
     super()
     this.state = {
       todos: [
-        {id: 0, title: 'Learn React', completed: false},
-        {id: 1, title: 'Learn Redux', completed: false},
-        {id: 2, title: 'Get loads of VC money', completed: false},
-        {id: 3, title: 'Sell *completely* out', completed: false}
+        {title: 'Learn React', completed: false},
+        {title: 'Learn Redux', completed: false},
+        {title: 'Get loads of VC money', completed: false},
+        {title: 'Sell *completely* out', completed: false}
       ],
       inputValue: '',
       activeFilter: Filters.FILTER_ALL
@@ -49,7 +49,6 @@ class AppContainer extends Component {
   render () {
     return (
       <App state={this.state}
-        onClickItem={(i) => this.handleClickItem(i)}
         onUpdateInput={(val) => this.handleInputChange(val)}
         onSubmitInput={() => this.handleAddItem()}
         onClickFilter={(filter) => this.setFilter(filter)} />

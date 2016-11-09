@@ -1,26 +1,37 @@
-import React from 'react'
+import { connect } from 'react-redux'
+import { toggleItemCompleted } from '../actions/todos'
 import { Filters } from '../actions/visibilityFilter'
 import TodoList from '../components/TodoList'
 
-const visibleItems = (todos, filter) => {
+const getVisibleItems = (todos, filter) => {
+  let indexedTodos = todos.map((todo, index) => Object.assign({}, todo, {id: index}))
   switch (filter) {
     case Filters.FILTER_COMPLETED:
-      return todos.filter(t => t.completed)
+      return indexedTodos.filter(t => t.completed)
     case Filters.FILTER_INCOMPLETE:
-      return todos.filter(t => !t.completed)
+      return indexedTodos.filter(t => !t.completed)
     default:
-      return todos
+      return indexedTodos
   }
 }
 
-const VisibleTodoList = ({items, filter, onClickItem}) => (
-  <TodoList items={visibleItems(items, filter)}
-    onClickItem={onClickItem} />
-)
-VisibleTodoList.propTypes = {
-  items: React.PropTypes.array,
-  filter: React.PropTypes.string,
-  onClickItem: React.PropTypes.func
+const mapStateToProps = (state) => {
+  return {
+    items: getVisibleItems(state.todos, state.visibilityFilter)
+  }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onClickItem: (id) => {
+      dispatch(toggleItemCompleted(id))
+    }
+  }
+}
+
+const VisibleTodoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList)
 
 export default VisibleTodoList
