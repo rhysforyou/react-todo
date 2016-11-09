@@ -1,10 +1,9 @@
 import React from 'react'
 import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 import ReactDOM from 'react-dom'
 import AppContainer from './containers/AppContainer'
 import './index.css'
-
-import { createStore } from 'redux'
 import todoApp from './reducers/todoApp'
 
 let store = createStore(todoApp)
