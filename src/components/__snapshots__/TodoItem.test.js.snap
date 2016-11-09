@@ -1,0 +1,12 @@
+exports[`test renders correctly 1`] = `
+<li
+  className="todo-list-item completed"
+  onClick={undefined}>
+  <label>
+    <input
+      checked={true}
+      type="checkbox" />
+    Test Item
+  </label>
+</li>
+`;

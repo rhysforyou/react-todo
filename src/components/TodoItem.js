@@ -13,7 +13,7 @@ const TodoItem = ({title, completed, onClick}) => (
 TodoItem.propTypes = {
   title: React.PropTypes.string.isRequired,
   completed: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func.isRequired
+  onClick: React.PropTypes.func
 }
 
 export default TodoItem

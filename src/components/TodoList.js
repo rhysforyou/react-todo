@@ -18,7 +18,7 @@ const TodoList = ({items, onClickItem}) => (
   </ul>
 )
 TodoList.propTypes = {
-  items: React.PropTypes.array,
+  items: React.PropTypes.array.isRequired,
   onClickItem: React.PropTypes.func
 }
 
