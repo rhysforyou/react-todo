@@ -5,7 +5,7 @@ import { mapStateToProps, mapDispatchToProps } from './VisibleTodoList'
 
 describe('Visible Todo List', () => {
   it('can map the app state to a list of filtered todo items', () => {
-    let initialState = {
+    var initialState = {
       todos: [
         {title: 'Test Item One', completed: false},
         {title: 'Test Item Two', completed: true},
@@ -17,6 +17,15 @@ describe('Visible Todo List', () => {
     expect(mapStateToProps(initialState)).toEqual({
       items: [
         {title: 'Test Item Two', completed: true, id: 1}
+      ]
+    })
+
+    initialState.visibilityFilter = Filters.FILTER_INCOMPLETE
+
+    expect(mapStateToProps(initialState)).toEqual({
+      items: [
+        {title: 'Test Item One', completed: false, id: 0},
+        {title: 'Test Item Three', completed: false, id: 2}
       ]
     })
   })
