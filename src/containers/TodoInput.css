@@ -1,4 +1,4 @@
-.todo-input form {
+.todo-input {
   display: flex;
   flex-direction: row;
   align-items: baseline;

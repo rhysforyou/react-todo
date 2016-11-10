@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import AddTodo from './AddTodo'
+import TodoInput from './TodoInput'
 import VisibleTodoList from './VisibleTodoList'
 import FilterBarContainer from './FilterBarContainer'
 import AppFooter from '../components/AppFooter'
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className='app'>
       <AppHeader />
-      <AddTodo />
+      <TodoInput />
       <VisibleTodoList />
       <FilterBarContainer />
       <AppFooter />
