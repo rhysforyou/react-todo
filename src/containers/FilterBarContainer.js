@@ -2,14 +2,14 @@ import { connect } from 'react-redux'
 import { setFilter, Filters } from '../actions/visibilityFilter'
 import FilterBar from '../components/FilterBar'
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return {
     activeFilter: state.visibilityFilter,
     filters: [Filters.FILTER_ALL, Filters.FILTER_COMPLETED, Filters.FILTER_INCOMPLETE]
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     onClickFilter: (filter) => {
       dispatch(setFilter(filter))
