@@ -15,13 +15,13 @@ const getVisibleItems = (todos, filter) => {
   }
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return {
     items: getVisibleItems(state.todos, state.visibilityFilter)
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     onClickItem: (id) => {
       dispatch(toggleItemCompleted(id))
