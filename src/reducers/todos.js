@@ -11,7 +11,7 @@ export default function todos (state = [], action) {
       return todos
     case TOGGLE_ITEM_COMPLETED:
       let todo = todos[action.index]
-      todos[action.index] = Object.assign({}, todo, {completed: !todo.completed})
+      todos[action.index] = {...todo, completed: !todo.completed}
       return todos
     default:
       return todos

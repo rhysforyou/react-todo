@@ -4,7 +4,7 @@ import { Filters } from '../actions/visibilityFilter'
 import TodoList from '../components/TodoList'
 
 const getVisibleItems = (todos, filter) => {
-  let indexedTodos = todos.map((todo, index) => Object.assign({}, todo, {id: index}))
+  let indexedTodos = todos.map((todo, index) => ({...todo, id: index}))
   switch (filter) {
     case Filters.FILTER_COMPLETED:
       return indexedTodos.filter(t => t.completed)
