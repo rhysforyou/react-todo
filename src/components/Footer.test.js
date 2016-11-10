@@ -7,7 +7,8 @@ const filters = ['one', 'two', 'three']
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Footer filters={filters} activeFilter='one' />
+    <Footer filters={filters}
+      activeFilter='one' />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
