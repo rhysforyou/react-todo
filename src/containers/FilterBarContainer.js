@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
-import { setFilter } from '../actions/visibilityFilter'
-import Footer from '../components/Footer'
-import { Filters } from '../actions/visibilityFilter'
+import { setFilter, Filters } from '../actions/visibilityFilter'
+import FilterBar from '../components/FilterBar'
 
 const mapStateToProps = (state) => {
   return {
@@ -18,9 +17,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const FooterContainer = connect(
+const FilterBarContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Footer)
+)(FilterBar)
 
-export default FooterContainer
+export default FilterBarContainer

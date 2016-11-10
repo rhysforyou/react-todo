@@ -1,4 +1,4 @@
-import './Footer.css'
+import './FilterBar.css'
 import React from 'react'
 
 const renderButtons = (filters, active, onClick) => {
@@ -11,15 +11,15 @@ const renderButtons = (filters, active, onClick) => {
     </button>
   ))
 }
-const Footer = ({filters, activeFilter, onClickFilter}) => (
+const FilterBar = ({filters, activeFilter, onClickFilter}) => (
   <div className='todo-filter-bar'>
     {renderButtons(filters, activeFilter, onClickFilter)}
   </div>
 )
-Footer.propTypes = {
+FilterBar.propTypes = {
   filters: React.PropTypes.array.isRequired,
   activeFilter: React.PropTypes.string.isRequired,
   onClickFilter: React.PropTypes.func
 }
 
-export default Footer
+export default FilterBar

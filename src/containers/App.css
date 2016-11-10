@@ -6,32 +6,3 @@
   box-sizing: border-box;
   box-shadow: 0 10px 20px #eee;
 }
-
-.app-header {
-  padding: 1rem;
-  color: black;
-  background: ghostwhite;
-  text-align: center;
-}
-
-.app-header h1 {
-  margin: 0;
-  padding: 0;
-  font-weight: lighter;
-}
-
-.app-header .highlight {
-  color: #4078c0;
-}
-
-.app-footer {
-  color: #aaa;
-  text-align: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.app-footer a {
-  color: #4078c0;
-  text-decoration: none;
-}

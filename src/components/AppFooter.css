@@ -1,0 +1,13 @@
+
+
+.app-footer {
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app-footer a {
+  color: #4078c0;
+  text-decoration: none;
+}

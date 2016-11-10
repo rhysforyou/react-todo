@@ -2,29 +2,20 @@ import React from 'react'
 import './App.css'
 import AddTodo from './AddTodo'
 import VisibleTodoList from './VisibleTodoList'
-import FooterContainer from './FooterContainer'
+import FilterBarContainer from './FilterBarContainer'
+import AppFooter from '../components/AppFooter'
+import AppHeader from '../components/AppHeader'
 
-const App = ({state, onUpdateInput, onSubmitInput}) => {
+const App = () => {
   return (
     <div className='app'>
-      <header className='app-header'>
-        <h1><span className='highlight'>React</span> To Do List</h1>
-      </header>
+      <AppHeader />
       <AddTodo />
       <VisibleTodoList />
-      <FooterContainer />
-      <footer className='app-footer'>
-        <span>Made with a little knowledge, and a lot of ❤️ by <a href='https://twitter.com/rhysforyou'>Rhys Powell</a></span>
-        <br />
-        <span><a href='https://github.com/rpowelll/react-todo'>View on GitHub</a></span>
-      </footer>
+      <FilterBarContainer />
+      <AppFooter />
     </div>
   )
-}
-App.propTypes = {
-  state: React.PropTypes.object,
-  onUpdateInput: React.PropTypes.func,
-  onSubmitInput: React.PropTypes.func
 }
 
 export default App
