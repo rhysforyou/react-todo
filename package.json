@@ -1,8 +1,10 @@
 {
   "name": "Todo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "http://extremely.online/react-todo/",
   "private": true,
+  "description": "A basic and kinda shitty to do list written in React",
+  "license": "MIT",
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "coveralls": "^2.11.14",
