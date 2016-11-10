@@ -1,11 +1,15 @@
 /* eslint-env jest */
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import TodoItem from './TodoItem'
 
-it('renders correctly', () => {
-  const tree = renderer.create(
-    <TodoItem title='Test Item' completed />
-  ).toJSON()
-  expect(tree).toMatchSnapshot()
+it('forwards click events to its `onClick` property', () => {
+  const onClick = jest.fn()
+  const wrapper = shallow(
+    <TodoItem title='Test Item'
+      completed
+      onClick={onClick} />
+  )
+  wrapper.find('.todo-list-item').simulate('click')
+  expect(onClick).toBeCalled()
 })

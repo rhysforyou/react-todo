@@ -7,7 +7,7 @@ const TodoItem = ({title, completed, onClick}) => (
     onClick={onClick}>
     <label>
       <input type='checkbox'
-        checked={completed} />
+        defaultChecked={completed} />
       {title}
     </label>
   </li>

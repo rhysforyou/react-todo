@@ -6,7 +6,7 @@ exports[`test renders correctly 1`] = `
     onClick={[Function]}>
     <label>
       <input
-        checked={false}
+        defaultChecked={false}
         type="checkbox" />
       Item One
     </label>
@@ -16,7 +16,7 @@ exports[`test renders correctly 1`] = `
     onClick={[Function]}>
     <label>
       <input
-        checked={true}
+        defaultChecked={true}
         type="checkbox" />
       Item Two
     </label>
@@ -26,7 +26,7 @@ exports[`test renders correctly 1`] = `
     onClick={[Function]}>
     <label>
       <input
-        checked={true}
+        defaultChecked={true}
         type="checkbox" />
       Item Three
     </label>

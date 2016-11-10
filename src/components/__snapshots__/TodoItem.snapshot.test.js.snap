@@ -4,7 +4,7 @@ exports[`test renders correctly 1`] = `
   onClick={undefined}>
   <label>
     <input
-      checked={true}
+      defaultChecked={true}
       type="checkbox" />
     Test Item
   </label>
