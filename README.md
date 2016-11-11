@@ -1,8 +1,9 @@
 # To Do List
 
-[![Build Status](https://travis-ci.org/rpowelll/react-todo.svg?branch=master)](https://travis-ci.org/rpowelll/react-todo)
-[![Coverage Status](https://coveralls.io/repos/github/rpowelll/react-todo/badge.svg?branch=master)](https://coveralls.io/github/rpowelll/react-todo?branch=master)
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/rpowelll/react-todo/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/rpowelll/react-todo.svg?style=flat-square)](https://travis-ci.org/rpowelll/react-todo)
+[![Coveralls](https://img.shields.io/coveralls/rpowelll/react-todo.svg?style=flat-square)](https://coveralls.io/github/rpowelll/react-todo?branch=master)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square)](http://standardjs.com/)
 
 ![A screenshot of the app](https://raw.githubusercontent.com/rpowelll/react-todo/master/screenshot.png)
 
