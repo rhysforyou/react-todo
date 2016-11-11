@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { shallow } from 'enzyme'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import App from './App'
@@ -10,7 +10,7 @@ let testStore = createStore(todoApp)
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<Provider store={testStore}>
+  shallow(<Provider store={testStore}>
     <App />
-  </Provider>, div)
+  </Provider>)
 })
