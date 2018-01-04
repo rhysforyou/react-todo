@@ -1,7 +1,19 @@
+---
 env:
   BUILDKITE_DOCKER: true
 
 steps:
+  - name: ":docker: Build"
+    agents:
+      - "docker=*"
+      - "queue=beta"
+    plugins:
+      docker-compose#v1.8.0:
+        build: app
+        image-repository: 519088498342.dkr.ecr.ap-southeast-2.amazonaws.com/react-todo
+
+  - wait
+
   - command: yarn test
     label: ":jest: Run Tests"
     agents:
