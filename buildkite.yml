@@ -1,0 +1,9 @@
+env:
+  BUILDKITE_DOCKER: true
+
+steps:
+  - command: "CI=true npm test"
+    label: ":jest: Run Tests"
+    agents:
+      - "docker=*"
+      - "queue=default"
