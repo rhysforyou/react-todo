@@ -2,7 +2,7 @@ env:
   BUILDKITE_DOCKER: true
 
 steps:
-  - command: "CI=true npm test"
+  - command: yarn test
     label: ":jest: Run Tests"
     agents:
       - "docker=*"
@@ -10,3 +10,5 @@ steps:
     plugins:
       docker-compose#v1.8.0:
         run: app
+        env:
+          - 'CI=true'
