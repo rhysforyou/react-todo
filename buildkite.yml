@@ -6,4 +6,7 @@ steps:
     label: ":jest: Run Tests"
     agents:
       - "docker=*"
-      - "queue=default"
+      - "queue=beta"
+    plugins:
+      docker-compose#v1.8.0:
+        run: app
