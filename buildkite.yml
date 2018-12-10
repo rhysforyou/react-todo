@@ -1,12 +1,9 @@
-env:
-  BUILDKITE_DOCKER: true
-
 steps:
-  - command: "CI=true yarn test"
-    label: ":jest: Run Tests"
+  - label: ":jest: Run Tests"
+    command: CI=true yarn test
     plugins:
-    - docker#v2.1.0:
-        image: .
+      - docker-compose#v2.5.1:
+          run: ci
     agents:
-      - "docker=*"
-      - "queue=default"
+      docker: "*"
+      queue: default
