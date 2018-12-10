@@ -1,12 +1,15 @@
 /* eslint-env jest */
 import React from 'react'
-import { shallow } from 'enzyme'
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import TodoItem from './TodoItem'
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('TodoItem', () => {
   it('forwards click events to its `onClick` property', () => {
     const onClick = jest.fn()
-    const wrapper = shallow(
+    const wrapper = Enzyme.shallow(
       <TodoItem title='Test Item'
         completed={false}
         onClick={onClick} />
@@ -17,7 +20,7 @@ describe('TodoItem', () => {
 
   describe('`completion` property', () => {
     it("applies the 'completed' class if present", () => {
-      const wrapper = shallow(
+      const wrapper = Enzyme.shallow(
         <TodoItem title='Test Item'
           completed={true} />
       )
@@ -25,7 +28,7 @@ describe('TodoItem', () => {
     })
 
     it("applies the 'incomplete' class if absent", () => {
-      const wrapper = shallow(
+      const wrapper = Enzyme.shallow(
         <TodoItem title='Test Item'
           completed={false} />
       )

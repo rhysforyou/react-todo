@@ -1,4 +1,5 @@
 import './FilterBar.css'
+import PropTypes from 'prop-types';
 import React from 'react'
 
 const renderButtons = (filters, active, onClick) => {
@@ -17,9 +18,9 @@ const FilterBar = ({filters, activeFilter, onClickFilter}) => (
   </div>
 )
 FilterBar.propTypes = {
-  filters: React.PropTypes.array.isRequired,
-  activeFilter: React.PropTypes.string.isRequired,
-  onClickFilter: React.PropTypes.func
+  filters: PropTypes.array.isRequired,
+  activeFilter: PropTypes.string.isRequired,
+  onClickFilter: PropTypes.func
 }
 
 export default FilterBar

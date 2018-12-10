@@ -1,19 +1,25 @@
-exports[`test renders correctly 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
 <div
-  className="todo-filter-bar">
+  className="todo-filter-bar"
+>
   <button
     className="active"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     one
   </button>
   <button
     className="inactive"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     two
   </button>
   <button
     className="inactive"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     three
   </button>
 </div>

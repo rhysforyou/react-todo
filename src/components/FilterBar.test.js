@@ -1,14 +1,17 @@
 /* eslint-env jest */
 import React from 'react'
-import { shallow, render } from 'enzyme'
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import FilterBar from './FilterBar'
+
+Enzyme.configure({ adapter: new Adapter() });
 
 const filters = ['one', 'two', 'three']
 
 describe('FilterBar', () => {
   it('forwards click events to its `onClickFilter` property', () => {
     const onClick = jest.fn()
-    const wrapper = shallow(
+    const wrapper = Enzyme.shallow(
       <FilterBar filters={filters}
         activeFilter='one'
         onClickFilter={onClick} />
@@ -18,7 +21,7 @@ describe('FilterBar', () => {
   })
 
   it('renders the filters provided to it', () => {
-    const wrapper = render(
+    const wrapper = Enzyme.render(
       <FilterBar filters={filters}
         activeFilter='one' />
     )
@@ -28,7 +31,7 @@ describe('FilterBar', () => {
   })
 
   it("applies the 'active' class to the active filter", () => {
-    const wrapper = shallow(
+    const wrapper = Enzyme.shallow(
       <FilterBar filters={filters}
         activeFilter='one' />
     )

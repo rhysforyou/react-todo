@@ -1,16 +1,18 @@
 /* eslint-env jest */
 import React from 'react'
-import { shallow } from 'enzyme'
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import App from './App'
 import todoApp from '../reducers/todoApp'
+import App from './App'
+
+Enzyme.configure({ adapter: new Adapter() });
 
 let testStore = createStore(todoApp)
 
 it('renders without crashing', () => {
-  const div = document.createElement('div')
-  shallow(<Provider store={testStore}>
+  Enzyme.shallow(<Provider store={testStore}>
     <App />
   </Provider>)
 })

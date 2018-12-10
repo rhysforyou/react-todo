@@ -1,4 +1,5 @@
 import './TodoItem.css'
+import PropTypes from 'prop-types';
 import React from 'react'
 
 const completionClass = (completed) => completed ? 'completed' : 'incomplete'
@@ -13,9 +14,9 @@ const TodoItem = ({title, completed, onClick}) => (
   </li>
 )
 TodoItem.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  completed: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  onClick: PropTypes.func
 }
 
 export default TodoItem

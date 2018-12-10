@@ -1,6 +1,7 @@
 import './TodoInput.css'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { addItem } from '../actions/todos'
 
 export class TodoInput extends Component {
@@ -30,7 +31,7 @@ export class TodoInput extends Component {
   }
 }
 TodoInput.propTypes = {
-  dispatch: React.PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired
 }
 
 export default connect()(TodoInput)

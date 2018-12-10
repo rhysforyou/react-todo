@@ -1,7 +1,10 @@
 /* eslint-env jest */
 import React from 'react'
-import { mount } from 'enzyme'
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import TodoList from './TodoList'
+
+Enzyme.configure({ adapter: new Adapter() });
 
 const items = [
   {title: 'Item One', completed: false, id: 0},
@@ -11,7 +14,7 @@ const items = [
 
 it('forwards click events to its `onClick` property', () => {
   const onClick = jest.fn()
-  const wrapper = mount(
+  const wrapper = Enzyme.mount(
     <TodoList items={items}
       onClickItem={onClick} />
   )

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react'
 import './TodoList.css'
 import TodoItem from './TodoItem'
@@ -18,8 +19,8 @@ const TodoList = ({items, onClickItem}) => (
   </ul>
 )
 TodoList.propTypes = {
-  items: React.PropTypes.array.isRequired,
-  onClickItem: React.PropTypes.func
+  items: PropTypes.array.isRequired,
+  onClickItem: PropTypes.func
 }
 
 export default TodoList
