@@ -1,9 +1,11 @@
 steps:
   - label: ":jest: Run Tests"
-    command: CI=true yarn test
+    command: yarn test
     plugins:
       - docker-compose#v2.5.1:
           run: ci
+          env:
+            - CI=true
     agents:
       docker: "*"
       queue: default
