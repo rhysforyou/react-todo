@@ -9,8 +9,8 @@ it('can create an Add Item action', () => {
 })
 
 it('can create a Toggle Item Completed action', () => {
-  expect(Todos.toggleItemCompleted(0)).toEqual({
+  expect(Todos.toggleItemCompleted('0')).toEqual({
     type: 'TOGGLE_ITEM_COMPLETED',
-    index: 0
+    id: '0'
   })
 })

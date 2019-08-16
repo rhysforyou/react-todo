@@ -6,11 +6,11 @@ exports[`renders correctly 1`] = `
 >
   <li
     className="todo-list-item incomplete"
-    onClick={[Function]}
   >
     <label>
       <input
-        defaultChecked={false}
+        checked={false}
+        onChange={[Function]}
         type="checkbox"
       />
       Item One
@@ -18,11 +18,11 @@ exports[`renders correctly 1`] = `
   </li>
   <li
     className="todo-list-item completed"
-    onClick={[Function]}
   >
     <label>
       <input
-        defaultChecked={true}
+        checked={true}
+        onChange={[Function]}
         type="checkbox"
       />
       Item Two
@@ -30,11 +30,11 @@ exports[`renders correctly 1`] = `
   </li>
   <li
     className="todo-list-item completed"
-    onClick={[Function]}
   >
     <label>
       <input
-        defaultChecked={true}
+        checked={true}
+        onChange={[Function]}
         type="checkbox"
       />
       Item Three
