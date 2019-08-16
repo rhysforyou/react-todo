@@ -8,7 +8,7 @@ import AppHeader from '../components/AppHeader'
 
 const App = () => {
   return (
-    <div className='app'>
+    <div className="app">
       <AppHeader />
       <TodoInput />
       <VisibleTodoList />
