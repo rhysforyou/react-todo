@@ -20,4 +20,4 @@ jobs:
     - name: npm install, build, and test
       run: |
         yarn install
-        yarn test
+        CI=true yarn test
